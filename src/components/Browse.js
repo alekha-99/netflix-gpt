@@ -7,7 +7,6 @@ import usePopularMovies from "../customHooks/usePopularMovies";
 import useTopRated from "../customHooks/useTopRated";
 import useUpComingMovies from "../customHooks/useUpComingMovies";
 import useTrendingMovies from "../customHooks/useTrendingMovies";
-import useRecommededMovies from "../customHooks/useRecommendedMovies";
 
 const Browse = () => {
   useNowPlayingMovies();
@@ -15,7 +14,6 @@ const Browse = () => {
   useTopRated();
   useUpComingMovies();
   useTrendingMovies();
-  useRecommededMovies();
 
   return (
     <div>

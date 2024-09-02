@@ -1,11 +1,9 @@
 import { useSelector } from "react-redux";
 import useVideoTrailer from "../customHooks/useVideoTrailer";
-import useRecommededMovies from "../customHooks/useRecommendedMovies";
 
 const VideoBackground = ({ movieId }) => {
   const trailerVideo = useSelector((store) => store.moives?.trailerVideo);
   useVideoTrailer(movieId);
-  useRecommededMovies(movieId);
   return (
     <div className=" w-screen">
       <iframe
