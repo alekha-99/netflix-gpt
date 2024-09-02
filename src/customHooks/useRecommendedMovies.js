@@ -4,7 +4,6 @@ import { addRecommendedMovies } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 const useRecommededMovies = (movieId) => {
-    console.log(movieId);
   const dispatch = useDispatch();
   const recommendedMovies = async () => {
     const data = await fetch(
@@ -14,7 +13,6 @@ const useRecommededMovies = (movieId) => {
       API_OPTIONS
     );
     const json = await data.json();
-    console.log(json.results)
     dispatch(addRecommendedMovies(json.results));
   };
   useEffect(() => {
